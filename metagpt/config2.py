@@ -62,6 +62,7 @@ class Config(CLIParams, YamlModel):
     proxy: str = ""
 
     # Tool Parameters
+    tool_dirs: List[Path] = [METAGPT_ROOT / "tools", METAGPT_ROOT / "skills"]
     search: SearchConfig = SearchConfig()
     enable_search: bool = False
     browser: BrowserConfig = BrowserConfig()
